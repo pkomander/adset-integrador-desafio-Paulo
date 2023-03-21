@@ -1,4 +1,4 @@
-Solicitação:
+# Solicitação:
 
 Faça um fork deste repositório;
 
@@ -18,5 +18,7 @@ Instruções:
 - Deixe a estrutura completa do Migration para o Entity Framework Code-First pronta para apenas executarmos e gerar o banco e tabelas.
 
 
-Pré-requisitos:
+# Pré-requisitos:
 
+# Notas:
+* Lembre-se de fazer um fork deste repositório! Apenas cloná-lo vai te impedir de criar o pull request e dificultar a entrega;
