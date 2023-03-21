@@ -19,6 +19,8 @@ Instruções:
 
 
 # Pré-requisitos:
+- Microsoft Visual Studio Community (https://visualstudio.microsoft.com/pt-br/vs/community/) 
+- Microsoft SQL Server Express (https://go.microsoft.com/fwlink/p/?linkid=2216019&clcid=0x416&culture=pt-br&country=br)
 
 # Notas:
 * Lembre-se de fazer um fork deste repositório! Apenas cloná-lo vai te impedir de criar o pull request e dificultar a entrega;
