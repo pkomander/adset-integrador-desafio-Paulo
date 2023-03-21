@@ -16,7 +16,7 @@ Instruções:
 - As telas devem ser responsivas, abrir corretamente em desktop e mobile.
 - O cadastro de veículo, ao clicar em confirmar não deve gravar diretamente em banco de dados, deverá ser criado um WebService para ser requisitado enviando os dados e deverá ser gravado em banco pelo WebService.
 - Deixe a estrutura completa do Migration para o Entity Framework Code-First pronta para apenas executarmos e gerar o banco e tabelas.
--Utilizar os conceitos de DDD, OO, POCO e SOLID que você julgar necessário;
+- Utilizar os conceitos de DDD, OO, POCO e SOLID que você julgar necessário;
 
 # Pré-requisitos:
 - HTML5, CSS, JavaScript, POO, C#, .NET 4.0+, WebApi, C#, ASP NET, SQL, LINQ, Entity Framework, Code First, Design Responsivo, WebServices *(SOAP)*, APIs Restfull e Windows Services
