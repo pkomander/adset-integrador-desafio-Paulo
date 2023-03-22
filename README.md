@@ -1,4 +1,4 @@
-<img src="https://github.com/adset-innov/adset-integrador-desafio/blob/main/LogoAdSet.png">
+<img src="https://github.com/adset-innov/adset-integrador-desafio/blob/main/LogoAdSet-Integrador.png">
 
 # Solicitação:
 
