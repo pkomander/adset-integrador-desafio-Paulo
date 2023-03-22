@@ -2,10 +2,10 @@
 
 Faça um fork deste repositório;
 
-Criar funcionalidade para incluir, consultar e alterar cadastro de Carros.
-O cadastro deverá possuir os campos (Marca, Modelo, Ano, Placa, Km, Cor, Preço, lista de opcionais para atribuir ao veículo ex.: (Ar Condicionado, Alarme, Airbag, Freio ABS)).
-Deverá ser possível incluir até 15 fotos para o veículo.
-Apenas a km, opcionais e fotos não devem ser obrigatórios.
+- Criar funcionalidade para incluir, consultar e alterar cadastro de Carros.
+- O cadastro deverá possuir os campos (Marca, Modelo, Ano, Placa, Km, Cor, Preço, lista de opcionais para atribuir ao veículo ex.: (Ar Condicionado, Alarme, Airbag, Freio ABS)).
+- Deverá ser possível incluir até 15 fotos para o veículo.
+- Apenas a km, opcionais e fotos não devem ser obrigatórios.
 
 Após terminar seu teste submeta um pull request e aguarde seu feedback.
 
