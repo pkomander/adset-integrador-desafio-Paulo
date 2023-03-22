@@ -2,7 +2,7 @@
 
 Faça um fork deste repositório;
 
-- Criar funcionalidade para incluir, consultar, excluir e alterar cadastro de carros.
+- Criar funcionalidade para incluir, consultar, excluir e alterar cadastro de carros e vincular aos portais iCarros e WebMotors no pacote (Bronze, Diamante, Platinium ou Básico) selecionado conforme layout.
 - O cadastro deverá possuir os campos (Marca, Modelo, Ano, Placa, Km, Cor, Preço, lista de opcionais para atribuir ao veículo ex.: (Ar Condicionado, Alarme, Airbag, Freio ABS)).
 - Deverá ser possível incluir até 15 fotos para o veículo.
 - Apenas a km, opcionais e fotos não devem ser obrigatórios.
@@ -10,9 +10,9 @@ Faça um fork deste repositório;
 Após terminar seu teste submeta um pull request e aguarde seu feedback.
 
 Instruções:
-- Criar um serviço windows para sincronizar dados da api de Tabela FIPE (https://documenter.getpostman.com/view/7064033/SWT5jMGk) das Marcas e Modelos de Carros e gravar em banco de dados, os modelos devem ser vinculados as suas respectivas marcas.
+- Criar um serviço windows para sincronizar todos os dias ás 02h (AM) os dados da api de Tabela FIPE (https://documenter.getpostman.com/view/7064033/SWT5jMGk) das Marcas e Modelos de Carros e gravar em banco de dados, os modelos devem ser vinculados as suas respectivas marcas.
 - No cadastro os campos Marca e Modelo devem consultar do banco de dados e os modelos devem ser exibidos conforme selecionar a marca correspondente.
-- A tela de consulta deverá ser desenvolvida conforme o layout criado no programa Adobe Illustrator.
+- A tela de estoque / consulta deverá ser desenvolvida conforme o layout (.....) criado no programa Adobe Illustrator.
 - As telas devem ser responsivas, abrir corretamente em desktop e mobile.
 - O cadastro de veículo, ao clicar em confirmar não deve gravar diretamente em banco de dados, deverá ser criado um WebService para ser requisitado enviando os dados e deverá ser gravado em banco pelo WebService.
 - Deixe a estrutura completa do Migration para o Entity Framework Code-First pronta para apenas executarmos e gerar o banco e tabelas.
