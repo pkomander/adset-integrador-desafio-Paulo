@@ -1,3 +1,5 @@
+<img src="https://github.com/adset-innov/adset-integrador-desafio/blob/main/LogoAdSet.png">
+
 # Solicitação:
 
 Faça um fork deste repositório;
