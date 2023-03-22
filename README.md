@@ -2,7 +2,7 @@
 
 Faça um fork deste repositório;
 
-- Criar funcionalidade para incluir, consultar e alterar cadastro de Carros.
+- Criar funcionalidade para incluir, consultar, excluir e alterar cadastro de carros.
 - O cadastro deverá possuir os campos (Marca, Modelo, Ano, Placa, Km, Cor, Preço, lista de opcionais para atribuir ao veículo ex.: (Ar Condicionado, Alarme, Airbag, Freio ABS)).
 - Deverá ser possível incluir até 15 fotos para o veículo.
 - Apenas a km, opcionais e fotos não devem ser obrigatórios.
@@ -19,12 +19,14 @@ Instruções:
 - Utilizar os conceitos de DDD, OO, POCO e SOLID que você julgar necessário;
 
 # Pré-requisitos:
-- Criar Projeto do tipo ASP.NET Web Application com Templete MVC/Razor
+- Criar Projeto do tipo ASP.NET Web Application com Template MVC/Razor
 - HTML5, CSS, JavaScript, POO, C#, .NET 4.0+, WebApi, C#, ASP NET, SQL, LINQ, Entity Framework, Code First, Design Responsivo, WebServices *(SOAP)*, APIs Restfull e Windows Services
-### IDE
-  - Microsoft Visual Studio 2013+ Community (https://visualstudio.microsoft.com/pt-br/vs/community/) 
-### Servidor de Banco
-  - Microsoft SQL Server 2012+ Express (https://go.microsoft.com/fwlink/p/?linkid=2216019&clcid=0x416&culture=pt-br&country=br)
+
+### IDE:
+ - Microsoft Visual Studio 2013+ Community (https://visualstudio.microsoft.com/pt-br/vs/community/)
+ 
+### Servidor de Banco:
+ - Microsoft SQL Server 2012+ Express (https://go.microsoft.com/fwlink/p/?linkid=2216019&clcid=0x416&culture=pt-br&country=br)
 
 # Notas:
 * Lembre-se de fazer um fork deste repositório! Apenas cloná-lo vai te impedir de criar o pull request e dificultar a entrega;
