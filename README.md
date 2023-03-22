@@ -24,7 +24,7 @@ Após terminar seu teste submeta um pull request e aguarde seu feedback.
 - Caso você julgar necessário, utilize Design patterns e nos informe quais utilizou e porque.
 
 ## Pré-requisitos:
-- HTML5, CSS, JavaScript, POO, C#, .NET 4.0+, WebApi, C#, ASP NET, SQL, LINQ, Entity Framework, Code First, Design Responsivo, WebServices *(SOAP)*, APIs Restfull e Windows Services
+- HTML5, CSS, JavaScript, Bootstrap, POO, C#, .NET 4.0+, WebApi, C#, ASP NET, SQL, LINQ, Entity Framework, Code First, Design Responsivo, WebServices *(SOAP)*, APIs Restfull e Windows Services
 
 ### IDE:
  - Visual Studio Community <b>2013</b>
