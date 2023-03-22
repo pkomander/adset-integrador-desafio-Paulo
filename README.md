@@ -19,11 +19,12 @@ Instruções:
 - Utilizar os conceitos de DDD, OO, POCO e SOLID que você julgar necessário;
 
 # Pré-requisitos:
+- Criar Projeto do tipo ASP.NET Web Application com Templete MVC/Razor
 - HTML5, CSS, JavaScript, POO, C#, .NET 4.0+, WebApi, C#, ASP NET, SQL, LINQ, Entity Framework, Code First, Design Responsivo, WebServices *(SOAP)*, APIs Restfull e Windows Services
 ### IDE
-  - Microsoft Visual Studio Community (https://visualstudio.microsoft.com/pt-br/vs/community/) 
+  - Microsoft Visual Studio 2013+ Community (https://visualstudio.microsoft.com/pt-br/vs/community/) 
 ### Servidor de Banco
-  - Microsoft SQL Server Express (https://go.microsoft.com/fwlink/p/?linkid=2216019&clcid=0x416&culture=pt-br&country=br)
+  - Microsoft SQL Server 2012+ Express (https://go.microsoft.com/fwlink/p/?linkid=2216019&clcid=0x416&culture=pt-br&country=br)
 
 # Notas:
 * Lembre-se de fazer um fork deste repositório! Apenas cloná-lo vai te impedir de criar o pull request e dificultar a entrega;
