@@ -27,10 +27,10 @@ Após terminar seu teste submeta um pull request e aguarde seu feedback.
 - HTML5, CSS, JavaScript, Bootstrap, POO, C#, .NET 4.0+, WebApi, C#, ASP NET, SQL, LINQ, Entity Framework, Code First, Design Responsivo, WebServices *(SOAP)*, APIs Restfull e Windows Services
 
 ### IDE:
- - Visual Studio Community <b>2013</b>
+ - Visual Studio <b>2013</b>
  
 ### Servidor de Banco:
- - Microsoft SQL Server 2012+ Express
+ - Microsoft SQL Server 2012+
 
 ## Notas:
 * Lembre-se de fazer um fork deste repositório! Apenas cloná-lo vai te impedir de criar o pull request e dificultar a entrega;
