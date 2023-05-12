@@ -14,7 +14,6 @@ Após terminar seu teste submeta um pull request e aguarde seu feedback.
 ## Instruções:
 - Criar Projeto do tipo Class Library para separar a camada de Dados.
 - Criar Projeto do tipo ASP.NET Web Application com Template MVC/Razor (Front-End)
-- Criar Projeto do tipo ASP.NET Empty Web Application e incluir a classe Web Service (ASMX) para criação de um endpoint em SOAP (Back-End)
 - A tela de estoque / consulta deverá ser desenvolvida conforme o layout (https://github.com/adset-innov/adset-integrador-desafio/blob/main/adset-layout.ai) criado no programa Adobe Illustrator.
 - Na camada de dados deixe a estrutura completa do Migration para o Entity Framework Code-First pronta para apenas executarmos e gerar o banco e tabelas.
 - Caso você julgar necessário, utilize Design patterns e nos informe quais utilizou e porque.
