@@ -12,14 +12,10 @@
 Após terminar seu teste submeta um pull request e aguarde seu feedback.
 
 ## Instruções:
-- Criar um serviço windows no Visual Studio ultizando tipo Windows Desktop com Template Windows Service, para sincronizar todos os dias ás 02h (AM) os dados da api de Tabela FIPE (https://documenter.getpostman.com/view/7064033/SWT5jMGk) das Marcas e Modelos de Carros e gravar em banco de dados, os modelos devem ser vinculados as suas respectivas marcas.
 - Criar Projeto do tipo Class Library para separar a camada de Dados.
 - Criar Projeto do tipo ASP.NET Web Application com Template MVC/Razor (Front-End)
 - Criar Projeto do tipo ASP.NET Empty Web Application e incluir a classe Web Service (ASMX) para criação de um endpoint em SOAP (Back-End)
-- No cadastro os campos Marca e Modelo devem consultar do banco de dados e os modelos devem ser exibidos conforme selecionar a marca correspondente.
 - A tela de estoque / consulta deverá ser desenvolvida conforme o layout (https://github.com/adset-innov/adset-integrador-desafio/blob/main/adset-layout.ai) criado no programa Adobe Illustrator.
-- As telas devem ser responsivas, abrir corretamente no desktop e mobile.
-- O cadastro de veículo, ao clicar em confirmar não deve gravar diretamente em banco de dados, deverá ser criado um WebService para ser requisitado enviando os dados e deverá ser gravado em banco pelo WebService.
 - Na camada de dados deixe a estrutura completa do Migration para o Entity Framework Code-First pronta para apenas executarmos e gerar o banco e tabelas.
 - Caso você julgar necessário, utilize Design patterns e nos informe quais utilizou e porque.
 
