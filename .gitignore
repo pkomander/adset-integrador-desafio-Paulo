@@ -10,7 +10,6 @@ TestResults/
 .vs/
 node_modules/
 .tmp/
-dist/
 
 # globs
 Makefile.in
