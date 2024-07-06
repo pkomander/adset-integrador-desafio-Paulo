@@ -1,0 +1,301 @@
+﻿@model IEnumerable<AdsetIntegrador.DTO.Carro.ReadCarroDto>
+@using System.IO
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@* <h1>Index</h1> *@
+
+<div class="informacoes-container">
+    <div class="informacoes">
+        <div class="informacoes-total">
+            <h3>@ViewBag.Total</h3>
+            <h5>Total</h5>
+        </div>
+        <div>
+            <div class="informacoes-cfoto">
+                <h3>@ViewBag.TotalComFotos</h3>
+                <h5>com fotos</h5>
+            </div>
+        </div>
+        <div>
+            <div class="informacoes-sfoto">
+                <h3>@ViewBag.TotalSemFotos</h3>
+                <h5>sem fotos</h5>
+            </div>
+        </div>
+        <div>
+            <div class="informacoes-exp">
+                <h5>Exportar Estoque</h5>
+                <div class="informacoes-exp-button">
+                    <a>
+                        <img src="~/excel.svg" width="20%" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="informacoes-buttons">
+        <div class="informacoes-buttons-criar">
+            <a asp-action="Create">
+                <img src="~/criar.svg" width="20%" />
+            </a>
+        </div>
+        <div class="informacoes-buttons-salvar">
+            <a>
+                <img src="~/Salvar.svg" width="20%" />
+            </a>
+        </div>
+    </div>
+</div>
+
+<div>
+        @using (Html.BeginForm("Index", "Carro", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            <div class="container">
+                @* <div class="col-md-6">
+                    <p style="font-size: 30px">Produto:</p>
+                    @Html.DropDownList("ProdutoComprado", (IEnumerable<SelectListItem>)ViewBag.Comprado, string.Empty, htmlAttributes: new { @class = "form-control" })
+                </div> *@
+                <div class="col-md-6">
+                    <p style="font-size: 30px">Placa:</p>
+                    <input type="text" id="placa" name="placa" class="form-control" />
+                </div>
+                <div class="col-md-12">
+                    <p style="font-size: 30px">Cor Comum:</p>
+                    @Html.DropDownList("Cor", new SelectList(ViewBag.CoresComuns), string.Empty, htmlAttributes: new { @class = "form-control" })
+                </div>
+                <div class="col-md-12">
+                    <p style="font-size: 30px">Marca:</p>
+                    <input type="text" id="marca" name="marca" class="form-control" />
+                </div>
+                <div class="col-md-12">
+                    <br />
+                    <input class="col-md-3 btn btn-dark" type="submit" value="Filtrar" />
+                </div>
+
+                <div class="col-md-6">
+                    <br />
+                    <input class="col-md-3 btn btn-dark" type="submit" value="Filtrar" />
+                </div>
+            </div>
+        }
+    @* <form class="search-form">
+        
+
+        <div>
+            <p>Marca</p>
+            <input type="text">
+        </div>
+
+        <div>
+            <p>Modelo</p>
+            <input type="text">
+        </div>
+        
+        <div>
+            <p>Ano Min</p>
+            <select>
+                <option>Todos</option>
+                <!-- Opções adicionais -->
+            </select>
+        </div>
+
+        <div>
+            <p>Ano Max</p>
+            <select>
+                <option>Todos</option>
+                <!-- Opções adicionais -->
+            </select>
+        </div>
+        
+        <div>
+            <p>Preço</p>
+            <select>
+                <option>Todos</option>
+                <!-- Opções adicionais -->
+            </select>
+        </div>
+        
+        <div>
+            <p>Fotos</p>
+            <select>
+                <option>Todos</option>
+                <!-- Opções adicionais -->
+            </select>
+        </div>
+        
+        <div>
+            <p>Opcionais</p>
+            <input type="text">
+        </div>
+
+        <div>
+            <p>Cor</p>
+            <select>
+                <option>Todos</option>
+                @foreach (var cor in ViewBag.CoresComuns)
+                {
+                    <option>@cor</option>
+                }
+            </select>
+        </div>
+
+        <a id="limparForm">
+            <img src="~/apagar.svg" width="20px" />
+        </a>
+
+        <button type="submit">
+            <img src="~/buscar.svg" alt="Buscar" width="20%">
+        </button>
+        
+    </form> *@
+</div>
+
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+@* <table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Foto")
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ano)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Placa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Km)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Preco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArCondicionado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Alarme)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Airbag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FreioABS)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @if (item.CarroFotos != null && item.CarroFotos.Count > 0 && item.CarroFotos[0].Foto != null)
+                {
+                    var fotoNome = item.CarroFotos[0].Foto.Nome;
+                    var nomeArquivo = fotoNome.Replace("\\", "/"); // Substitui as barras invertidas por barras normais
+                    var nomeArquivoSemCaminho = nomeArquivo.Substring(nomeArquivo.LastIndexOf("/") + 1); // Obtém apenas o nome do arquivo sem o caminho
+                    <img src="/uploads/wwwroot/uploads/@nomeArquivoSemCaminho" alt="Foto do Carro" />
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Marca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modelo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ano)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Placa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Km)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Preco)
+            </td>
+            <td>
+                    @if(item.ArCondicionado == true)
+                    {
+                        <p class="opcionais">Sim</p>
+                    }
+                    else
+                    {
+                        <p class="opcionais">Não</p>
+                    }
+            </td>
+            <td>
+                    @if (item.Alarme == true)
+                    {
+                        <p class="opcionais">Sim</p>
+                    }
+                    else
+                    {
+                        <p class="opcionais">Não</p>
+                    }
+            </td>
+            <td>
+                    @if (item.Airbag == true)
+                    {
+                        <p class="opcionais">Sim</p>
+                    }
+                    else
+                    {
+                        <p class="opcionais">Não</p>
+                    }
+            </td>
+            <td>
+                    @if (item.Airbag == true)
+                    {
+                        <p class="opcionais">Sim</p>
+                    }
+                    else
+                    {
+                        <p class="opcionais">Não</p>
+                    }
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+ *@
+
+
+@section scripts {
+    <script>
+        $.get("controller/Index", function (data) {
+            // Aqui você pode manipular os dados recebidos, por exemplo:
+            console.log(data); // Exibe os dados retornados pelo endpoint
+            // Você pode iterar pelos carros retornados, acessando cada propriedade conforme necessário
+            $.each(data, function (index, carro) {
+                console.log(carro); // Exibe cada objeto de carro retornado
+                // Aqui você pode fazer o que precisar com cada objeto carro
+            });
+        });
+    </script>
+}

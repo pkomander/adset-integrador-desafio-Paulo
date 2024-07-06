@@ -1,0 +1,92 @@
+﻿@model AdsetIntegrador.DTO.Carro.CreateCarroDto
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>CreateCarroDto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Marca" class="control-label"></label>
+                <input asp-for="Marca" class="form-control" />
+                <span asp-validation-for="Marca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modelo" class="control-label"></label>
+                <input asp-for="Modelo" class="form-control" />
+                <span asp-validation-for="Modelo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ano" class="control-label"></label>
+                <input asp-for="Ano" class="form-control" />
+                <span asp-validation-for="Ano" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Placa" class="control-label"></label>
+                <input asp-for="Placa" class="form-control" />
+                <span asp-validation-for="Placa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Km" class="control-label"></label>
+                <input asp-for="Km" class="form-control" />
+                <span asp-validation-for="Km" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cor" class="control-label"></label>
+                <input asp-for="Cor" class="form-control" />
+                <span asp-validation-for="Cor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Preco" class="control-label"></label>
+                <input asp-for="Preco" class="form-control" />
+                <span asp-validation-for="Preco" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ArCondicionado" /> @Html.DisplayNameFor(model => model.ArCondicionado)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Alarme" /> @Html.DisplayNameFor(model => model.Alarme)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Airbag" /> @Html.DisplayNameFor(model => model.Airbag)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="FreioABS" /> @Html.DisplayNameFor(model => model.FreioABS)
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="Imagens" class="control-label">Imagens</label>
+                <input type="file" asp-for="Imagens" class="form-control" multiple />
+                <span asp-validation-for="Imagens" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        console.log("ola");
+    </script>
+}
