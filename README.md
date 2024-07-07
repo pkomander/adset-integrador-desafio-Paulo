@@ -46,3 +46,6 @@ Após terminar seu teste submeta um pull request e aguarde seu feedback.
 
 ## Inicializar Projeto:
 - para inicializar o projeto devera setar a biblioteca de classe AdsetIntegrador.Repository, como projeto padrão no terminal do Nuget, todas as migrations do banco estão contidas lá.
+
+## Observações:
+- Devido esta envolvido com outras tarefas que não possibilitaram a concluão do projeto, referenciando o Front-end do projeto, porem o back-end esta completamente funcional, espero poder participar novamente em outro momento com mais tempo para mostrar minhas desde já grato.
