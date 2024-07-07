@@ -1,4 +1,5 @@
-﻿using AdsetIntegrador.DTO.Carro;
+﻿using AdsetIntegrador.Domain;
+using AdsetIntegrador.DTO.Carro;
 using AdsetIntegrador.DTO.CarroFoto;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,6 @@ namespace AdsetIntegrador.Repository.Services.Interface
     public interface ICarroFotoService
     {
         Task<ReadCarroFotoDto> Create(CreateCarroFotoDto carroFotoDto);
-        Task<bool> Delete(int id);
+        Task<List<CarroFoto>> Delete(int id);
     }
 }

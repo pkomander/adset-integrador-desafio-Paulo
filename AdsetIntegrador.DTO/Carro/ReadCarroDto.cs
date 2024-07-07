@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AdsetIntegrador.DTO.CarroFoto;
+using Microsoft.AspNetCore.Http;
 
 namespace AdsetIntegrador.DTO.Carro
 {
@@ -20,10 +21,11 @@ namespace AdsetIntegrador.DTO.Carro
         public long? Km { get; set; }
         public string Cor { get; set; }
         public decimal Preco { get; set; }
-        public bool? ArCondicionado { get; set; }
-        public bool? Alarme { get; set; }
-        public bool? Airbag { get; set; }
-        public bool? FreioABS { get; set; }
+        public bool ArCondicionado { get; set; }
+        public bool Alarme { get; set; }
+        public bool Airbag { get; set; }
+        public bool FreioABS { get; set; }
         public List<ReadCarroFotoDto>? CarroFotos { get; set; }
+        public List<IFormFile>? Imagens { get; set; }
     }
 }

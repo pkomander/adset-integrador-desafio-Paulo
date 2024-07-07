@@ -16,14 +16,16 @@ namespace AdsetIntegrador.Repository.Services.Repository
     public class CarroFotoRepository : ICarroFotoService
     {
         private readonly IGenericService _genericService;
+        private readonly IFotoService _fotoService;
         private readonly Context _context;
         private readonly IMapper _mapper;
 
-        public CarroFotoRepository(IGenericService genericService, Context context, IMapper mapper)
+        public CarroFotoRepository(IGenericService genericService, Context context, IMapper mapper, IFotoService fotoService)
         {
             _genericService = genericService;
             _context = context;
             _mapper = mapper;
+            _fotoService = fotoService;
         }
 
         public async Task<ReadCarroFotoDto> Create(CreateCarroFotoDto carroFotoDto)
@@ -42,24 +44,31 @@ namespace AdsetIntegrador.Repository.Services.Repository
             }
         }
 
-        public async Task<bool> Delete(int id)
+        public async Task<List<CarroFoto>> Delete(int id)
         {
             try
             {
-                //var foto = await _context.Carros.FirstOrDefaultAsync(x => x.FotoId == id);
+                var fotos = await _context.carroFotos.Where(x => x.CarroId == id).ToListAsync();
 
-                //if (foto == null)
-                //    return false;
+                foreach (var item in fotos)
+                {
+                    var filePath = Path.Combine("wwwroot/uploads", item.Foto.Nome).Replace("\\", "/").Replace(" ", string.Empty);
 
-                //var fotos = await _context.carroFotos.Where(x => x.CarroId == foto.FotoId).ToListAsync();
+                    if (System.IO.File.Exists(filePath))
+                    {
+                        // Deleta o arquivo
+                        System.IO.File.Delete(filePath);
+                    }
+                }
 
-                //if (fotos.Any())
-                //    _genericService.DeleteRange<CarroFoto>(fotos.ToArray());
+                if (fotos.Any())
+                {
+                    _genericService.DeleteRange<CarroFoto>(fotos.ToArray());
+                    await _genericService.SaveChangesAsync();
+                    return fotos;
+                }
 
-                //_genericService.Delete<Foto>(foto);
-                //await _genericService.SaveChangesAsync();
-
-                return true;
+                return fotos;
             }
             catch (Exception ex)
             {

@@ -1,15 +1,16 @@
-﻿@model AdsetIntegrador.DTO.Carro.CreateCarroDto
+﻿@model AdsetIntegrador.DTO.Carro.ReadCarroDto
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
 }
 
-<h1>Adicionar Carro</h1>
+<h1>Edit</h1>
 
+<h4>ReadCarroDto</h4>
 <hr />
 <div class="row">
-    <div class="col-md-10">
-        <form asp-action="Create" enctype="multipart/form-data">
+    <div class="col-md-4">
+        <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group row">
                 <label asp-for="Marca" class="control-label col-md-2"></label>
@@ -72,19 +73,17 @@
                 <label for="Imagens" class="control-label">Imagens</label>
                 <input type="file" asp-for="Imagens" class="form-control" multiple />
             </div>
-
-            <br />
             <div class="form-group">
-                <input type="submit" value="Salvar" class="btn btn-primary" />
-                <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
-<br />
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-    <script src="~/js/ValidaImagem.js"></script>
 }

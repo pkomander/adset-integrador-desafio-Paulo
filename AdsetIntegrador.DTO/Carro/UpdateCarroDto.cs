@@ -6,6 +6,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using AdsetIntegrador.DTO.CarroFoto;
 
 namespace AdsetIntegrador.DTO.Carro
 {
@@ -31,13 +33,14 @@ namespace AdsetIntegrador.DTO.Carro
         [DisplayFormat(DataFormatString = "{0:F2}", ApplyFormatInEditMode = true)]
         public decimal Preco { get; set; }
         [DisplayName("Ar Condicionado")]
-        public bool? ArCondicionado { get; set; }
+        public bool ArCondicionado { get; set; }
         [DisplayName("Alarme")]
-        public bool? Alarme { get; set; }
+        public bool Alarme { get; set; }
         [DisplayName("Airbag")]
-        public bool? Airbag { get; set; }
+        public bool Airbag { get; set; }
         [DisplayName("Freio ABS")]
-        public bool? FreioABS { get; set; }
-        //public List<CarroFoto>? CarroFotos { get; set; }
+        public bool FreioABS { get; set; }
+        public List<UpdateCarroFotoDto>? CarroFotos { get; set; }
+        public List<IFormFile>? Imagens { get; set; }
     }
 }

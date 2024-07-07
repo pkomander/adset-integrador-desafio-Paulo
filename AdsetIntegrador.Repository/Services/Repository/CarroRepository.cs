@@ -4,11 +4,6 @@ using AdsetIntegrador.Repository.Data;
 using AdsetIntegrador.Repository.Services.Interface;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdsetIntegrador.Repository.Services.Repository
 {
@@ -96,7 +91,7 @@ namespace AdsetIntegrador.Repository.Services.Repository
             }
         }
 
-        public async Task<bool> Delete(int id)
+        public async Task<bool> Delete(int? id)
         {
             try
             {
@@ -176,17 +171,21 @@ namespace AdsetIntegrador.Repository.Services.Repository
                     query = query.Where(c => c.Alarme == true);
                 }
 
-                if (!string.IsNullOrEmpty(opcionais) && opcionais == "ArCondicionado")
+                if (!string.IsNullOrEmpty(opcionais) && opcionais == "Ar Condicionado")
                 {
                     query = query.Where(c => c.ArCondicionado == true);
                 }
 
-                if (!string.IsNullOrEmpty(opcionais) && opcionais == "FreioABS")
+                if (!string.IsNullOrEmpty(opcionais) && opcionais == "Freio ABS")
                 {
                     query = query.Where(c => c.FreioABS == true);
                 }
 
-                if (!string.IsNullOrEmpty(cor))
+                if (!string.IsNullOrEmpty(cor) && cor == "Todos")
+                {
+                    query = query.Where(c => c.Cor == cor);
+                }
+                else if (!string.IsNullOrEmpty(cor))
                 {
                     query = query.Where(c => c.Cor == cor);
                 }

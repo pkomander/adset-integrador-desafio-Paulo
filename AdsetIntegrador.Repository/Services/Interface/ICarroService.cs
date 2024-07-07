@@ -15,6 +15,6 @@ namespace AdsetIntegrador.Repository.Services.Interface
         Task<List<ReadCarroDto>> FindAll();
         Task<List<ReadCarroDto>> FindFiltro(string? placa, string? marca, string? modelo, string? anoMin, string? anoMax, string? preco, string? foto, string? opcionais, string? cor);
         Task<ReadCarroDto> Update(int id, UpdateCarroDto personDto);
-        Task<bool> Delete(int id);
+        Task<bool> Delete(int? id);
     }
 }

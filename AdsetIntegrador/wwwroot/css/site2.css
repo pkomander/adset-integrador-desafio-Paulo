@@ -1,0 +1,204 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+header {
+    background-color: #c5bdbd;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.opcionais{
+    text-align: center;
+}
+
+.informacoes-container {
+    /*width: 48%;*/
+    display: flex;
+    justify-content: space-between;
+    background-color: #c5bdbd;
+}
+
+.informacoes {
+    display: flex;
+    justify-content: space-around;
+    font-size: 10px;
+    width: 50%;
+    /*padding-top: 3%;*/
+}
+
+.informacoes-total {
+    color: blue;
+    padding-top: 3%;
+}
+
+.informacoes-total div {
+    border: left;
+}
+
+.informacoes-total h3 {
+    color: grey;
+    font-size: 15px;
+    text-align: center;
+}
+
+.informacoes-total h5 {
+    font-size: 15px;
+}
+
+
+.informacoes-cfoto {
+    color: greenyellow;
+    padding-top: 27%;
+}
+
+.informacoes-cfoto h3 {
+    color: grey;
+    font-size: 15px;
+    text-align: center;
+}
+
+.informacoes-cfoto h5 {
+    font-size: 15px;
+}
+
+.informacoes-sfoto {
+    color: red;
+    padding-top: 27%;
+}
+
+.informacoes-sfoto h3 {
+    color: grey;
+    font-size: 15px;
+    text-align: center;
+}
+
+.informacoes-sfoto h5 {
+    font-size: 15px;
+}
+
+.informacoes-exp {
+    color: grey;
+    padding-top: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.informacoes-exp h3 {
+    color: grey;
+    font-size: 15px;
+    text-align: center;
+}
+
+.informacoes-exp h5 {
+    font-size: 15px;
+}
+
+.informacoes-exp button {
+    background: transparent;
+    border: none;
+    width: auto;
+}
+
+.informacoes-buttons {
+    width: 50%;
+    display: flex;
+    justify-content: inherit;
+}
+
+.informacoes-buttons-criar a {
+    background: transparent;
+    border: none;
+    /*width: auto;*/
+    padding-top: 4%;
+}
+
+.informacoes-buttons-criar a img {
+    width: 20%;
+}
+
+.informacoes-buttons-salvar a {
+    background: transparent;
+    border: none;
+    /*width: auto;*/
+    padding-top: 4%;
+}
+
+.informacoes-buttons-salvar a img {
+    width: 40%;
+}
+
+/*formulario*/
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-form input[type="text"],
+.search-form select {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+}
+
+.search-form button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+.search-form button img {
+    width: 20px;
+    height: 20px;
+}
+
+.search-form div {
+    text-align: center;
+}
+
+.search-form div p {
+    text-align: center;
+    margin: 0;
+}
+
+#limparForm{
+    padding-top: 30px;
+    cursor: pointer;
+}
+

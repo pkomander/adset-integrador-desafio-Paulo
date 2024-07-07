@@ -30,7 +30,8 @@ namespace AdsetIntegrador.DTO.Carro
         [Required(ErrorMessage = "O campo Cor é obrigatorio")]
         public string Cor { get; set; }
         [Required(ErrorMessage = "O campo Preço é obrigatorio")]
-        [DisplayFormat(DataFormatString = "{0:F2}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Currency)]
+        [DisplayFormat(DataFormatString = "{0:N}", ApplyFormatInEditMode = true)]
         public decimal Preco { get; set; }
         [DisplayName("Ar Condicionado")]
         public bool ArCondicionado { get; set; }
@@ -41,7 +42,7 @@ namespace AdsetIntegrador.DTO.Carro
         [DisplayName("Freio ABS")]
         public bool FreioABS { get; set; }
         public List<CreateCarroFotoDto>? CarroFotos { get; set; }
-        public List<IFormFile> Imagens { get; set; }
+        public List<IFormFile>? Imagens { get; set; }
 
     }
 }
