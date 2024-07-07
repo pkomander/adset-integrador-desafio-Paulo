@@ -31,3 +31,18 @@ Após terminar seu teste submeta um pull request e aguarde seu feedback.
 
 ## Notas:
 * Lembre-se de fazer um fork deste repositório! Apenas cloná-lo vai te impedir de criar o pull request e dificultar a entrega;
+
+## Notas:
+![image](https://github.com/pkomander/adset-integrador-desafio-Paulo/assets/54222357/c1c57333-da1d-494a-9ef9-896288ba967d)
+Projeto desenvolvido utilizado ASP NET MVC/Razor .NET CORE 8, utilizando o padão de projetos de desenvolvimento em camadas.
+- AdsetIntegrador responsavel pelo Front-end e requisições para as bibliotecas de classes.
+- AdsetIntegrador.Business, responsavel pelas validações implementadas no Domain e Dto.
+- AdsetIntegrador.Domain, responsavel pelas classes do banco de dados.
+- AdsetIntegrador.DTO, responsavel por implementar as abstrações dos objetos do banco de dados, separadamente como (CreateCarroDto, UpdateCarroDto, ReadCarroDto).
+- AdsetIntegrador.Repository, responsavel por implementar as interfaces e repository, responsavel pelos metodos do crud do projeto.
+
+## Padrão de projetos:
+- Foi utilizado o padrão de projetos Arquitetura em Camadas, pois na arquitetura em camadas, a aplicação é dividida em várias camadas, cada uma responsável por uma parte específica da funcionalidade da aplicação. Cada camada tem uma responsabilidade bem definida e comunica-se com as outras camadas de maneira controlada.
+
+## Inicializar Projeto:
+- para inicializar o projeto devera setar a biblioteca de classe AdsetIntegrador.Repository, como projeto padrão no terminal do Nuget, todas as migrations do banco estão contidas lá.
